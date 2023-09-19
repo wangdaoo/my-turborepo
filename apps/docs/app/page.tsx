@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card } from "ui";
+import { Card } from "@turbo/ui";
 import styles from "./page.module.css";
 
 function Gradient({
@@ -55,7 +55,7 @@ export default function Page(): JSX.Element {
       <div className={styles.description}>
         <p>
           examples/basic&nbsp;
-          <code className={styles.code}>docs</code>
+          <code className={styles.code}>turbo docs</code>
         </p>
         <div>
           <a

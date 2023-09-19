@@ -1,15 +1,17 @@
 {
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "build": "turbo run build --no-daemon",
+    "dev": "turbo run dev --no-daemon",
+    "lint": "turbo run lint --no-daemon",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean:cache": "rimraf ./node_modules/.cache/turbo"
   },
   "devDependencies": {
     "eslint": "^8.48.0",
     "prettier": "^3.0.3",
-    "tsconfig": "workspace:*",
+    "rimraf": "^5.0.1",
+    "@turbo/tsconfig": "workspace:*",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.6.10",
