@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import { uniqueId } from "@turbo/utils";
+
+console.log(uniqueId('prefix_'));
 </script>
 
 <template>
