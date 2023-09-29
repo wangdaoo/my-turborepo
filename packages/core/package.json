@@ -1,0 +1,33 @@
+{
+    "name": "@turbo/core",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./dist/index.js",
+    "module": "./dist/index.esm.js",
+    "exports": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.esm.js",
+        "default": "./dist/index.js"
+    },
+    "type": "module",
+    "scripts": {
+        "dev": "concurrently -k -p \"[{name}]\" -n \"rollup,ts\" -c \"bgBlue.bold,bgMagenta.bold\" \"rollup -c -w\" \"tsc -w\"",
+        "build": "pnpm run clear && rollup -c",
+        "clear": "rimraf ./dist"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@rollup/plugin-typescript": "^11.1.4",
+        "@turbo/eslint-config-custom": "workspace:^",
+        "@turbo/tsconfig": "workspace:^",
+        "concurrently": "^8.2.1",
+        "rollup": "^3.29.4",
+        "rollup-plugin-dts": "^6.0.2",
+        "tslib": "^2.6.2"
+    },
+    "dependencies": {
+        "@turbo/utils": "workspace:^"
+    }
+}
